@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Morning My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+
+background:
+linear-gradient(
+rgba(255,245,248,0.65),
+rgba(255,228,236,0.65)
+),
+url("ourlovestory.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+
+height:100vh;
+overflow:hidden;
+
+font-family:Poppins;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+}
+
+.container{
+
+width:90%;
+max-width:700px;
+background:rgba(255,255,255,.35);
+backdrop-filter:blur(15px);
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 40px rgba(0,0,0,.3);
+color:brown;
+
+}
+
+h1{
+
+font-family:"Great Vibes";
+font-size:66px;
+font-weight:bold;
+margin-bottom:15px;
+color: brown;
+}
+h2{
+
+font-family:Calibri;
+font-size:18px;
+font-weight:bold;
+margin-bottom:15px;
+color: brown;
+}
+p{
+  font-family:"calibri";
+  font-size: 20px;
+  font-weight: bold;
+  color: brown;
+}
+
+button{
+
+padding:15px 40px;
+border:none;
+border-radius:50px;
+background:#ff4d88;
+color:brown;
+font-size:20px;
+cursor:pointer;
+margin-top:20px;
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+#letter{
+
+display:none;
+margin-top:30px;
+font-size:20px; /* about 10% larger */
+font-weight:600;
+line-height:2;
+
+}}
+
+img{
+
+margin-top:25px;
+width:220px;
+border-radius:20px;
+box-shadow:0 0 20px white;
+
+}
+
+.heart{
+
+position:absolute;
+color:pink;
+font-size:20px;
+animation:float 8s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+30%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh);
+opacity:0;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<audio id="music" loop>
+<source src="Ordinary(128k).mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<h1>Goodday nonkie❤️</h1>
+<h2>Its advisable to wear headphones love </h2>
+<h3>14 july 2026</h3>
+
+<p>
+Every sunrise reminds me that God is still writing our beautiful story.
+</p>
+
+<button onclick="startLove()">
+Open My Heart
+</button>
+
+<div id="letter"></div>
+
+</div>
+
+<script>
+
+const poem=`
+
+I hope you doing good my answered prayer.
+
+As this this day begins,
+I thank God for another sunrise,
+another breath,
+and another chance to love you.
+
+You are one of the greatest blessings
+He has ever placed in my life.
+
+May today be filled with His peace,
+His joy,
+and His unfailing love.
+
+May your smile never fade,
+and may your heart always remember
+that you are deeply loved.
+
+"Love is patient, love is kind."
+
+— 1 Corinthians 13:4
+
+Wherever life takes us,
+I pray we continue walking together
+with Christ at the center.
+
+I choose you
+not only in life's extraordinary moments,
+but also in the quiet mornings,
+the ordinary conversations,
+and every blessing God gives us.
+
+Thank you
+for being part of my story.
+
+I love you️❤️
+
+`;
+
+let i=0;
+
+function startLove(){
+
+document.getElementById("music").play();
+
+document.querySelector("button").style.display="none";
+
+document.getElementById("letter").style.display="block";
+
+typeWriter();
+
+setTimeout(()=>{
+document.getElementById("photo").style.display="block";
+},17000);
+
+}
+
+function typeWriter(){
+
+if(i<poem.length){
+
+document.getElementById("letter").innerHTML+=poem.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,40);
+
+}
+
+}
+
+for(let x=0;x<40;x++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+heart.style.fontSize=(15+Math.random()*30)+"px";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
